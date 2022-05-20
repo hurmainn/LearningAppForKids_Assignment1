@@ -2,6 +2,7 @@ package com.example.abc_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button O=findViewById(R.id.O);
         Button P=findViewById(R.id.P);
         Button Q=findViewById(R.id.Q);
-        Button R_=findViewById(R.id.S);
+        Button r=findViewById(R.id.R);
         Button S=findViewById(R.id.S);
         Button T=findViewById(R.id.T);
         Button U=findViewById(R.id.U);
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         O.setOnClickListener(this);
         P.setOnClickListener(this);
         Q.setOnClickListener(this);
-        R_.setOnClickListener(this);
+        r.setOnClickListener(this);
         S.setOnClickListener(this);
         T.setOnClickListener(this);
         U.setOnClickListener(this);
@@ -90,8 +91,165 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,PicturePageActivity.class);
         switch(view.getId())
         {
+            case R.id.A:
+            {
+                intent.putExtra("letter","a");
+                startActivity(intent);
+                break;    }
+            case R.id.B:
+            {
+                intent.putExtra("letter","b");
+                startActivity(intent);
+                break;
+            }
+            case R.id.C:
+            {
+                intent.putExtra("letter","c");
+                startActivity(intent);
+                break;
+            }
+            case R.id.D:
+            {
+                intent.putExtra("letter","d");
+                startActivity(intent);
+                break;
+            }
+            case R.id.E:
+            {
+                intent.putExtra("letter","e");
+                startActivity(intent);
+                break;
+            }
+            case R.id.F:
+            {
+                intent.putExtra("letter","f");
+                startActivity(intent);
+                break;
+            }
+            case R.id.G:
+            {
+                intent.putExtra("letter","g");
+                startActivity(intent);
+                break;
+            }
+            case R.id.H:
+            {
+                intent.putExtra("letter","h");
+                startActivity(intent);
+                break;
+            }
+            case R.id.I:
+            {
+                intent.putExtra("letter","i");
+                startActivity(intent);
+                break;
+            }
+            case R.id.J:
+            {
+                intent.putExtra("letter","j");
+                startActivity(intent);
+                break;
+            }
+            case R.id.K:
+            {
+                intent.putExtra("letter","k");
+                startActivity(intent);
+                break;
+            }
+            case R.id.L:
+            {
+                intent.putExtra("letter","l");
+                startActivity(intent);
+                break;
+            }
+            case R.id.M:
+            {
+                intent.putExtra("letter","m");
+                startActivity(intent);
+                break;
+            }
+            case R.id.N:
+            {
+                intent.putExtra("letter","n");
+                startActivity(intent);
+                break;
+            }
+            case R.id.O:
+            {
+                intent.putExtra("letter","o");
+                startActivity(intent);
+                break;
+            }
+            case R.id.P:
+            {
+                intent.putExtra("letter","p");
+                startActivity(intent);
+                break;
+            }
+            case R.id.Q:
+            {
+                intent.putExtra("letter","q");
+                startActivity(intent);
+                break;
+            }
+            case R.id.R:
+            {
+                intent.putExtra("letter","r");
+                startActivity(intent);
+                break;
+            }
+            case R.id.S:
+            {
+                intent.putExtra("letter","s");
+                startActivity(intent);
+                break;
+            }
+            case R.id.T:
+            {
+                intent.putExtra("letter","t");
+                startActivity(intent);
+                break;
+            }
+            case R.id.U:
+            {
+                intent.putExtra("letter","u");
+                startActivity(intent);
+                break;
+            }
+            case R.id.V:
+            {
+                intent.putExtra("letter","v");
+                startActivity(intent);
+                break;
+            }
+            case R.id.W:
+            {
+                intent.putExtra("letter","w");
+                startActivity(intent);
+                break;
+            }
+            case R.id.X:
+            {
+                intent.putExtra("letter","x");
+                startActivity(intent);
+                break;
+            }
+            case R.id.Y:
+            {
+                intent.putExtra("letter","y");
+                startActivity(intent);
+                break;
+            }
+            case R.id.Z:
+        {
+            intent.putExtra("letter","z");
+            startActivity(intent);
+            break;
+        }
+
 
         }
 
