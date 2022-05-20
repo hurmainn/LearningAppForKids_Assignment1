@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ABC_APP">
         <activity
+            android:name=".SuccessOrFailureActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuizActivity"
             android:exported="false" />
         <activity
