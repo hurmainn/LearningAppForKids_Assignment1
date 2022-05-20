@@ -3,9 +3,12 @@ package com.example.abc_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
 
+    GridView gridView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +24,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        //alphabets to grid view
+        string adapter= ArrayAdapter<String>(applicationContext,android.androidx.appcompat.R.layout.simple_dropdown_item_1line,alphabets);
+        gridView= findViewById(R.layout.gridView);
+        gridView.adapter=adapter;
     }
 }
