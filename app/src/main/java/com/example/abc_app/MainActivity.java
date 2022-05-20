@@ -18,14 +18,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //Creating alphabets array
-        String[] alphabets={ };
-        alphabets = new String[26];
-        char ascii=65;
-        for(int i=0;i<26;i++)
-        {
-            alphabets[i]=Character.toString(ascii);         //fill the array with alphabets
-        }
-
+//        String[] alphabets={ };
+//        alphabets = new String[26];
+//        char ascii=65;
+//        for(int i=0;i<26;i++)
+//        {
+//            alphabets[i]=Character.toString(ascii);         //fill the array with alphabets
+//        }
+        Button EnterToQuiz=findViewById(R.id.quiz); EnterToQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent quizIntent=new Intent(MainActivity.this,QuizActivity.class);
+startActivity(quizIntent);}
+        });
         //giving variables to buttons
        Button A=findViewById(R.id.A);
         Button B=findViewById(R.id.B);
