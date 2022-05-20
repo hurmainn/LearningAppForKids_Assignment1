@@ -24,9 +24,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        //alphabets to grid view
-        string adapter= ArrayAdapter<String>(applicationContext,android.androidx.appcompat.R.layout.simple_dropdown_item_1line,alphabets);
-        gridView= findViewById(R.layout.gridView);
-        gridView.adapter=adapter;
     }
 }
