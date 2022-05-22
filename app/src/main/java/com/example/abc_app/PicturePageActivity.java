@@ -12,7 +12,7 @@ public class PicturePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_picture_page);
 
-int id;
+//int id;
         String idd =getIntent().getStringExtra("letter");
       //  id=getResources().getIdentifier("letter","drawable","com.example.abc_app");
         ImageView imageView;

@@ -3,6 +3,7 @@ package com.example.abc_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -87,7 +88,8 @@ startActivity(quizIntent);}
         Y.setOnClickListener(this);
         Z.setOnClickListener(this);
 
-
+    Button GoToGit=findViewById(R.id.gitbtn);
+    GoToGit.setOnClickListener(this);
 
 
 
@@ -99,6 +101,15 @@ startActivity(quizIntent);}
         Intent intent=new Intent(MainActivity.this,PicturePageActivity.class);
         switch(view.getId())
         {
+            //for git
+            case R.id.gitbtn:
+            {
+                Uri gitAccount=Uri.parse("https://github.com/hurmainn");
+                intent=new Intent(Intent.ACTION_VIEW,gitAccount);
+                startActivity(intent);
+                break;
+            }
+            //for alphabet buttons
             case R.id.A:
             {
                 intent.putExtra("letter","a");
