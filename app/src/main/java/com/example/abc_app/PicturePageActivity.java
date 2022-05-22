@@ -3,10 +3,11 @@ package com.example.abc_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 
 public class PicturePageActivity extends AppCompatActivity {
-
+    private static final String TAG="PicturePageActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +73,44 @@ public class PicturePageActivity extends AppCompatActivity {
             imageView.setImageResource(R.drawable.y);
         else if(idd.equals("z"))
             imageView.setImageResource(R.drawable.z);
+    }
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        Log.d(TAG,"onStart Activity PicturePage");
+    }
 
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Log.d(TAG,"onResume Activity PicturePage");
+    }
 
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Log.d(TAG,"onPause Activity PicturePage");
+    }
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Log.d(TAG,"onStop Activity PicturePage");
+    }
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Log.d(TAG,"onDestroy Activity PicturePage");
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        Log.d(TAG,"onRestart Activity PicturePage");
     }
 }
