@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG="QuizActivity";
@@ -34,36 +36,37 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        Intent intent=new Intent(QuizActivity.this,SuccessFailureActivity.class);
-        //intent.putExtra("option","wrong");
-        int count=1;
-        TextView text=findViewById(R.id.count);
         ImageView image=findViewById(R.id.imageView);
         switch(view.getId())
         {
 
             case R.id.option1:
             {
-                intent.putExtra("option","wrong1");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "WRONG OPTION",
+                        Toast.LENGTH_LONG).show();
+
                 break;
             }
             case R.id.option2:      //correct option
             {
-                intent.putExtra("option","right");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "CORRECT OPTION",
+                        Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.option3:
             {
-                intent.putExtra("option","wrong2");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "WRONG OPTION",
+                        Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.option4:
             {
-                intent.putExtra("option","wrong3");
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),
+                        "WRONG OPTION",
+                        Toast.LENGTH_LONG).show();
                 break;
             }
         }
