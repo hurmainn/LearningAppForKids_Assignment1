@@ -37,150 +37,85 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        ImageView image=findViewById(R.id.imageView);
-        TextView mcqNo=findViewById(R.id.count);
-        int count=1;
+        Intent intent=new Intent(QuizActivity.this,MainActivity.class);
+        ImageView image = findViewById(R.id.imageView);
+        TextView mcqNo = findViewById(R.id.count);
+        int count = 1;
 
-        if (count==1)
-        {
-            mcqNo.setText(count);
-            image.setImageResource(R.drawable.s);
-            switch (view.getId()) {
-                case R.id.option1: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-
-                    break;
-                }
-                case R.id.option2:      //correct option
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "CORRECT OPTION",
-                            Toast.LENGTH_LONG).show();
-                    count += 1;
-                    break;
-                }
-                case R.id.option3: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option4: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
+        if (count == 1) {
+            if (view.getId() == R.id.option2) {
+                count++;
+                mcqNo.setText(Integer.toString(count));
+                option1.setText("APPLE");
+                option2.setText("SUN");
+                option3.setText("PEN");
+                option4.setText("BALL");
+                image.setImageResource(R.drawable.a);
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),
+                        "INCORRECT",
+                        Toast.LENGTH_LONG)
+                        .show();
             }
         }
-        else if(count==2)
-        {
-            mcqNo.setText(count);
-            image.setImageResource(R.drawable.a);
-            switch (view.getId()) {
-                case R.id.option1: {
-                    Toast.makeText(getApplicationContext(),
-                            "CORRECT OPTION",
-                            Toast.LENGTH_LONG).show();
-                    count += 1;
-                    break;
-                }
-                case R.id.option2:      //correct option
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option3: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option4: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
+        else if (count == 2) {
+            if (view.getId() == R.id.option1) {
+                count++;
+                mcqNo.setText(Integer.toString(count));
+                image.setImageResource(R.drawable.b);
+                option1.setText("APPLE");
+                option2.setText("SUN");
+                option3.setText("PEN");
+                option4.setText("BALL");
             }
-            count+=1;
-        }
-        else if(count==3)
-        {
-            mcqNo.setText(count);
-            image.setImageResource(R.drawable.p);
-            switch (view.getId()) {
-                case R.id.option1: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-
-                    break;
-                }
-                case R.id.option2:      //correct option
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option3: {
-                    Toast.makeText(getApplicationContext(),
-                            "RIGHT OPTION",
-                            Toast.LENGTH_LONG).show();
-                    count += 1;
-                    break;
-                }
-                case R.id.option4: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
+            else
+            {
+                Toast.makeText(getApplicationContext(),
+                        "INCORRECT",
+                        Toast.LENGTH_LONG)
+                        .show();
             }
-            count+=1;
         }
-        else if(count==4)
-        {
-            mcqNo.setText(count);
-            image.setImageResource(R.drawable.b);
-            switch (view.getId()) {
-                case R.id.option1: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-
-                    break;
-                }
-                case R.id.option2:      //correct option
-                {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option3: {
-                    Toast.makeText(getApplicationContext(),
-                            "WRONG OPTION",
-                            Toast.LENGTH_LONG).show();
-                    break;
-                }
-                case R.id.option4: {
-                    Toast.makeText(getApplicationContext(),
-                            "CORRECT OPTION",
-                            Toast.LENGTH_LONG).show();
-                    count += 1;
-                    break;
-                }
+        else if (count == 3) {
+            if (view.getId() == R.id.option4) {
+                count++;
+                mcqNo.setText(Integer.toString(count));
+                image.setImageResource(R.drawable.p);
+                option1.setText("APPLE");
+                option2.setText("SUN");
+                option3.setText("PEN");
+                option4.setText("BALL");
             }
-            count+=1;
+            else
+            {
+                Toast.makeText(getApplicationContext(),
+                        "INCORRECT",
+                        Toast.LENGTH_LONG)
+                        .show();
+            }
         }
+        else if (count == 4) {
+            if (view.getId() == R.id.option3) {
 
+                mcqNo.setText(Integer.toString(count));
+                Toast.makeText(getApplicationContext(),
+                        "CONGRATULATIONS!!!",
+                        Toast.LENGTH_LONG)
+                        .show();
+                startActivity(intent);
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),
+                        "INCORRECT",
+                        Toast.LENGTH_LONG)
+                        .show();
+            }
+        }
     }
+
 //    @Override
 //    protected void onStart()
 //    {
