@@ -16,6 +16,7 @@ import android.widget.Toast;
 public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG="QuizActivity";
     Button option1,option2,option3,option4;
+    public int count = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent=new Intent(QuizActivity.this,MainActivity.class);
         ImageView image = findViewById(R.id.imageView);
         TextView mcqNo = findViewById(R.id.count);
-        int count = 1;
+
 
         if (count == 1) {
             if (view.getId() == R.id.option2) {
